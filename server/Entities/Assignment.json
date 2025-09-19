@@ -1,0 +1,132 @@
+{
+  "name": "Assignment",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique assignment ID"
+    },
+    "title": {
+      "type": "string",
+      "description": "Assignment title"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed assignment description"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject name"
+    },
+    "subject_code": {
+      "type": "string",
+      "description": "Subject code"
+    },
+    "teacher_id": {
+      "type": "string",
+      "description": "ID of the teacher who assigned this"
+    },
+    "teacher_name": {
+      "type": "string",
+      "description": "Name of the teacher"
+    },
+    "student_id": {
+      "type": "string",
+      "description": "ID of the student this assignment is for"
+    },
+    "class": {
+      "type": "string",
+      "description": "Class/grade for this assignment"
+    },
+    "assigned_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when assignment was assigned"
+    },
+    "due_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Due date for submission"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "completed", "overdue"],
+      "default": "pending",
+      "description": "Current status of the assignment"
+    },
+    "file_url": {
+      "type": "string",
+      "description": "URL to the assignment file"
+    },
+    "file_name": {
+      "type": "string",
+      "description": "Original name of the assignment file"
+    },
+    "submission_url": {
+      "type": "string",
+      "description": "URL to the student's submission file"
+    },
+    "submission_file_name": {
+      "type": "string",
+      "description": "Name of the submitted file"
+    },
+    "submitted_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Date when assignment was submitted"
+    },
+    "grade": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Grade received (0-100)"
+    },
+    "feedback": {
+      "type": "string",
+      "description": "Teacher's feedback on the submission"
+    },
+    "points": {
+      "type": "number",
+      "description": "Total points for this assignment"
+    },
+    "is_optional": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this assignment is optional"
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Academic year"
+    },
+    "semester": {
+      "type": "string",
+      "description": "Academic semester"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the record was created"
+    },
+    "updated_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp when the record was last updated"
+    }
+  },
+  "required": [
+    "title",
+    "subject",
+    "teacher_id",
+    "teacher_name",
+    "student_id",
+    "class",
+    "assigned_date",
+    "due_date"
+  ]
+}
+
+
+
+
+
+

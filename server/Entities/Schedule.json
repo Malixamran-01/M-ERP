@@ -1,0 +1,105 @@
+{
+  "name": "Schedule",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique schedule entry ID"
+    },
+    "student_id": {
+      "type": "string",
+      "description": "Student ID this schedule belongs to"
+    },
+    "class": {
+      "type": "string",
+      "description": "Class/grade level"
+    },
+    "day": {
+      "type": "string",
+      "enum": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "description": "Day of the week"
+    },
+    "time": {
+      "type": "string",
+      "format": "time",
+      "description": "Class time (HH:MM format)"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "time",
+      "description": "Class end time (HH:MM format)"
+    },
+    "subject": {
+      "type": "string",
+      "description": "Subject name"
+    },
+    "subject_code": {
+      "type": "string",
+      "description": "Subject code/identifier"
+    },
+    "teacher_id": {
+      "type": "string",
+      "description": "Teacher ID assigned to this class"
+    },
+    "teacher_name": {
+      "type": "string",
+      "description": "Teacher's full name"
+    },
+    "room": {
+      "type": "string",
+      "description": "Classroom or location"
+    },
+    "duration": {
+      "type": "number",
+      "description": "Class duration in minutes"
+    },
+    "is_break": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this is a break period"
+    },
+    "is_optional": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this is an optional class"
+    },
+    "semester": {
+      "type": "string",
+      "description": "Academic semester"
+    },
+    "academic_year": {
+      "type": "string",
+      "description": "Academic year"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "inactive", "cancelled"],
+      "default": "active",
+      "description": "Schedule status"
+    },
+    "created_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this schedule was created"
+    },
+    "updated_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When this schedule was last updated"
+    }
+  },
+  "required": [
+    "student_id",
+    "day",
+    "time",
+    "subject",
+    "teacher_id",
+    "teacher_name"
+  ]
+}
+
+
+
+
+
+

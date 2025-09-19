@@ -1,0 +1,11 @@
+{
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "department_id": "string",
+  "year": "number",
+  "capacity": "number",
+  "current_students": "number",
+  "created_at": "string",
+  "updated_at": "string"
+}

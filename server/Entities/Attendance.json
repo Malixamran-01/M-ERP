@@ -1,0 +1,48 @@
+{
+    "name": "Attendance",
+    "type": "object",
+    "properties": {
+      "student_id": {
+        "type": "string",
+        "description": "Student's ID"
+      },
+      "student_name": {
+        "type": "string",
+        "description": "Student's full name"
+      },
+      "class": {
+        "type": "string",
+        "description": "Class name"
+      },
+      "date": {
+        "type": "string",
+        "format": "date",
+        "description": "Attendance date"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "present",
+          "absent",
+          "late",
+          "excused"
+        ],
+        "description": "Attendance status"
+      },
+      "marked_by": {
+        "type": "string",
+        "description": "Teacher who marked attendance"
+      },
+      "notes": {
+        "type": "string",
+        "description": "Additional notes about attendance"
+      }
+    },
+    "required": [
+      "student_id",
+      "student_name",
+      "class",
+      "date",
+      "status"
+    ]
+  }

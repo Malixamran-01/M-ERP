@@ -1,0 +1,36 @@
+[
+  {
+    "employee_id": "TCH2024004",
+    "first_name": "Ustadha",
+    "last_name": "Aisha",
+    "phone": "+1234567904",
+    "email": "ustadha.aisha@madrasa.edu",
+    "position": "teacher",
+    "subjects": ["Quran", "Arabic", "Islamic Studies"],
+    "classes_assigned": ["Grade 5", "Grade 6"],
+    "hire_date": "2022-01-15",
+    "salary": 4200,
+    "qualifications": "Alimah Degree, Hafiza",
+    "status": "active"
+  },
+  {
+    "employee_id": "TCH2024005",
+    "first_name": "Maulana",
+    "last_name": "Yusuf",
+    "phone": "+1234567905",
+    "email": "maulana.yusuf@madrasa.edu",
+    "position": "senior_teacher",
+    "subjects": ["Quran", "Tajweed", "Islamic Studies"],
+    "classes_assigned": ["Grade 4", "Grade 5"],
+    "hire_date": "2021-06-01",
+    "salary": 4800,
+    "qualifications": "Alim Degree, Hafiz, Tajweed Specialist",
+    "status": "active"
+  }
+]
+
+
+
+
+
+

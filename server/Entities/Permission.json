@@ -1,0 +1,65 @@
+{
+  "name": "Permission",
+  "description": "Permission entity for RBAC system",
+  "fields": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique permission identifier"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Human-readable permission name"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "description": "Permission description"
+    },
+    "category": {
+      "type": "string",
+      "required": true,
+      "description": "Permission category (e.g., 'User Management', 'Academic Management')"
+    },
+    "action": {
+      "type": "string",
+      "required": true,
+      "enum": ["create", "read", "update", "delete", "manage", "view", "assign"],
+      "description": "Type of action this permission allows"
+    },
+    "resource": {
+      "type": "string",
+      "required": true,
+      "description": "Resource this permission applies to (e.g., 'users', 'students', 'schedules')"
+    },
+    "created_date": {
+      "type": "string",
+      "required": true,
+      "description": "Permission creation timestamp"
+    },
+    "updated_date": {
+      "type": "string",
+      "required": true,
+      "description": "Permission last update timestamp"
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "active",
+      "enum": ["active", "inactive", "deprecated"],
+      "description": "Permission status"
+    }
+  },
+  "indexes": ["id", "category", "action", "resource", "status"],
+  "relationships": {
+    "roles": {
+      "type": "many-to-many",
+      "entity": "RolePermission",
+      "description": "Roles that have this permission"
+    }
+  }
+}
+
+
+

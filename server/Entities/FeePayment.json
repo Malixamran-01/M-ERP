@@ -1,0 +1,76 @@
+{
+    "name": "FeePayment",
+    "type": "object",
+    "properties": {
+      "student_id": {
+        "type": "string",
+        "description": "Student's ID"
+      },
+      "student_name": {
+        "type": "string",
+        "description": "Student's full name"
+      },
+      "amount": {
+        "type": "number",
+        "description": "Payment amount"
+      },
+      "fee_type": {
+        "type": "string",
+        "enum": [
+          "tuition",
+          "hostel",
+          "meal",
+          "transport",
+          "library",
+          "exam",
+          "other"
+        ],
+        "description": "Type of fee"
+      },
+      "payment_method": {
+        "type": "string",
+        "enum": [
+          "cash",
+          "bank_transfer",
+          "cheque",
+          "online"
+        ],
+        "description": "Method of payment"
+      },
+      "payment_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date of payment"
+      },
+      "month_year": {
+        "type": "string",
+        "description": "Fee month and year (e.g., 'January 2024')"
+      },
+      "receipt_number": {
+        "type": "string",
+        "description": "Receipt number"
+      },
+      "notes": {
+        "type": "string",
+        "description": "Additional notes"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "completed",
+          "pending",
+          "failed"
+        ],
+        "default": "completed",
+        "description": "Payment status"
+      }
+    },
+    "required": [
+      "student_id",
+      "student_name",
+      "amount",
+      "fee_type",
+      "payment_date",
+      "month_year"
+    ]
+  }

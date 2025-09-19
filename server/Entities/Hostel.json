@@ -1,0 +1,11 @@
+{
+  "id": "string",
+  "name": "string",
+  "description": "string",
+  "capacity": "number",
+  "current_occupancy": "number",
+  "location": "string",
+  "amenities": "array",
+  "created_at": "string",
+  "updated_at": "string"
+}

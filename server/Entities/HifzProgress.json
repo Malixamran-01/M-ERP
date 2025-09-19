@@ -1,0 +1,60 @@
+{
+    "name": "HifzProgress",
+    "type": "object",
+    "properties": {
+      "student_id": {
+        "type": "string",
+        "description": "Student's ID"
+      },
+      "student_name": {
+        "type": "string",
+        "description": "Student's full name"
+      },
+      "surah_name": {
+        "type": "string",
+        "description": "Name of the Surah"
+      },
+      "ayah_from": {
+        "type": "number",
+        "description": "Starting Ayah number"
+      },
+      "ayah_to": {
+        "type": "number",
+        "description": "Ending Ayah number"
+      },
+      "memorization_date": {
+        "type": "string",
+        "format": "date",
+        "description": "Date when memorized"
+      },
+      "revision_status": {
+        "type": "string",
+        "enum": [
+          "excellent",
+          "good",
+          "needs_improvement",
+          "poor"
+        ],
+        "description": "Quality of memorization"
+      },
+      "teacher_feedback": {
+        "type": "string",
+        "description": "Teacher's feedback"
+      },
+      "total_pages_completed": {
+        "type": "number",
+        "description": "Total pages memorized so far"
+      },
+      "verified_by": {
+        "type": "string",
+        "description": "Teacher who verified the memorization"
+      }
+    },
+    "required": [
+      "student_id",
+      "student_name",
+      "surah_name",
+      "memorization_date",
+      "revision_status"
+    ]
+  }

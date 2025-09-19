@@ -1,0 +1,84 @@
+{
+  "name": "Department",
+  "description": "Department entity for organizational structure",
+  "fields": {
+    "id": {
+      "type": "string",
+      "required": true,
+      "description": "Unique department identifier"
+    },
+    "name": {
+      "type": "string",
+      "required": true,
+      "description": "Department name"
+    },
+    "description": {
+      "type": "string",
+      "required": false,
+      "description": "Department description"
+    },
+    "icon": {
+      "type": "string",
+      "required": false,
+      "description": "Department icon (emoji or icon name)"
+    },
+    "color": {
+      "type": "string",
+      "required": true,
+      "description": "Department color for UI display"
+    },
+    "parent_department_id": {
+      "type": "string",
+      "required": false,
+      "description": "Parent department ID for hierarchical structure"
+    },
+    "head_user_id": {
+      "type": "string",
+      "required": false,
+      "description": "User ID of department head"
+    },
+    "budget": {
+      "type": "number",
+      "required": false,
+      "description": "Department budget"
+    },
+    "created_date": {
+      "type": "string",
+      "required": true,
+      "description": "Department creation timestamp"
+    },
+    "updated_date": {
+      "type": "string",
+      "required": true,
+      "description": "Department last update timestamp"
+    },
+    "created_by": {
+      "type": "string",
+      "required": false,
+      "description": "User ID who created this department"
+    },
+    "status": {
+      "type": "string",
+      "required": true,
+      "default": "active",
+      "enum": ["active", "inactive", "archived"],
+      "description": "Department status"
+    }
+  },
+  "indexes": ["id", "name", "parent_department_id", "status"],
+  "relationships": {
+    "users": {
+      "type": "one-to-many",
+      "entity": "User",
+      "description": "Users belonging to this department"
+    },
+    "roles": {
+      "type": "many-to-many",
+      "entity": "Role",
+      "description": "Roles that have access to this department"
+    }
+  }
+}
+
+
+
